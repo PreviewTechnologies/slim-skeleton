@@ -2,7 +2,7 @@
 // Routes
 
 $app->get('/[{name}]', function ($request, $response, $args) {
-    $this->logger->info("Slim-Skeleton '/' route");
-    // Render index view
-    return $this->view->render($response, 'index.twig');
+    $this->flash->addMessage('success', 'Slim Skeleton ready to Go!');
+    $msg = $this->flash->getMessages();
+    return $this->view->render($response, 'index.twig', ['message' => $msg]);
 });
