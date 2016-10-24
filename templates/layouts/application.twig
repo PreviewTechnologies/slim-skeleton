@@ -20,6 +20,10 @@
     <!-- Custom stylesheet -->
     <link href="/assets/css/main.css" rel="stylesheet">
 
+    <!-- Inject css/js into top of the layout from another place -->
+    {% block cssTop %} {% endblock %}
+    {% block jsTop %} {% endblock %}
+
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
@@ -148,5 +152,10 @@
 <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
 <!-- Custom javascript -->
 <script src="/assets/js/theme.js"></script>
+
+<!-- Inject css/js into bottom of the layout from another place -->
+{% block cssBottom %} {% endblock %}
+{% block jsBottom %} {% endblock %}
+
 </body>
 </html>
